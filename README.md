@@ -4,100 +4,130 @@ A modern, AI-powered travel planning web app. Plan, manage, and navigate persona
 
 ---
 
-## 🚦 Project Rules (Summary)
-- **App Flow:** Onboarding carousel → Auth (Google/Apple/Phone) → Dashboard (Create Trip, Past Trips) → Trip Form (city, dates, interests) → AI Itinerary → Edit via Chat → Map Navigation → Export (ICS/PDF/Email) → Offline & Notifications
-- **Frontend:**
-  - Atomic design: `/components/atoms`, `/components/molecules`
-  - Pages: `/pages` (React Router v6)
-  - API: `/services` (Axios, JWT)
-  - Hooks: `/hooks` (custom, typed)
-  - Styles: Tailwind, custom theme (forest green #2F855A, sky blue #4299E1, white backgrounds)
-  - Accessibility: ARIA, keyboard nav, focus outlines, WCAG 2.1 AA
-  - Responsive: Mobile-first, all modern browsers
-- **Backend:** Node.js (16+), Express, PostgreSQL (AWS RDS), OpenAI GPT-4, Mapbox/Google Maps, OAuth2, AWS SNS (SMS/Push)
-- **Non-Functional:** 99% uptime, <3s load, GDPR/CCPA-ready, CircleCI, Jest
-
----
-
-## ✨ Features
-- Onboarding carousel (AI, map, chat preview)
-- OAuth login (Google, Apple, phone/OTP)
-- Dashboard: Create Trip, Past Trips
-- Trip creation: City, dates, interests → AI itinerary
-- Itinerary: Chronological, editable, exportable
-- Real-time chat for itinerary edits
-- Embedded map navigation
-- Export: Calendar (ICS), PDF, Email
-- Offline mode, push notifications
-
----
-
-## 🛠️ Tech Stack
-- **Frontend:** React 18+, TypeScript, Tailwind CSS, React Router v6, Framer Motion, Lucide Icons, PWA-ready
-- **Backend:** Node.js, Express, PostgreSQL, OpenAI GPT-4, Mapbox/Google Maps, AWS (ECS, Fargate, S3, SNS)
-- **DevOps:** CircleCI, Jest, Supertest
+## 🚦 Project Overview & App Flow
+- **App Flow:**
+  1. Onboarding carousel (AI, map, chat preview)
+  2. Auth (Google OAuth implemented; Apple/Phone UI only)
+  3. Dashboard (Create Trip, Past Trips [stub])
+  4. Trip Form (city, dates, interests → AI itinerary [stub])
+  5. Itinerary (chronological, editable [stub], exportable [stub])
+  6. Real-time chat for itinerary edits [UI stub]
+  7. Embedded map navigation [UI stub]
+  8. Export: Calendar (ICS), PDF, Email [UI stub]
+  9. Offline mode, push notifications [future]
 
 ---
 
 ## 📁 Folder Structure
 ```
+backend/                # Node.js/Express backend (Google OAuth, API)
 src/
   components/
-    atoms/        # Button, Input, Logo, Toast, etc.
-    molecules/    # FeatureCard, StatCard, Layout, etc.
-  pages/          # Landing, Onboarding, Login, Dashboard, TripForm, etc.
-  services/       # API clients (Axios)
-  hooks/          # Custom hooks (useNavigation, etc.)
-  styles/         # Tailwind config, global styles
-  assets/         # Images, icons
-  utils/          # Helpers
-  App.tsx         # Main app with routing
-  index.tsx       # Entry point
-  index.css       # Global styles
+    atoms/              # Button, Input, Logo, Toast
+    molecules/          # FeatureCard, StatCard, Layout
+  pages/                # Landing, Onboarding, Login, Dashboard, TripForm, etc.
+  services/             # API client (Axios)
+  hooks/                # useNavigation
+  styles/               # (empty)
+  assets/               # (empty)
+  utils/                # (empty)
+  App.tsx               # Main app with routing
+  index.tsx             # Entry point
+  index.css             # Global styles
 ```
 
 ---
 
-## 🚀 Getting Started
-1. **Clone the repo:**
-   ```bash
-   git clone <repo-url>
-   cd vibe-coded-web-app
-   ```
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-3. **Start the dev server:**
-   ```bash
-   npm start
-   ```
-4. **Open:** [http://localhost:3001](http://localhost:3001)
+## ✨ Features (Current State)
+- Onboarding carousel: **Implemented**
+- OAuth login: **Google implemented** (Apple/Phone UI only)
+- Dashboard: **Create Trip UI, Past Trips stub**
+- Trip creation: **Form UI implemented, AI itinerary stub**
+- Itinerary: **UI stub, edit/export buttons**
+- Real-time chat: **UI stub only**
+- Embedded map navigation: **UI stub only**
+- Export: **UI stub (ICS/PDF/Email)**
+- Offline mode, push notifications: **Not implemented**
 
 ---
 
-## 🧭 App Flow
-1. **Onboarding:** Carousel with AI, map, chat preview
-2. **Auth:** Google, Apple, or phone (OTP)
-3. **Dashboard:** Create Trip, view Past Trips
-4. **Trip Form:** Enter city, dates, interests → AI generates itinerary
-5. **Itinerary:** Chronological, editable, exportable (ICS/PDF/Email)
-6. **Chat:** Real-time AI edits to itinerary
-7. **Map:** Embedded navigation, step controls
-8. **Export:** Calendar, PDF, Email
-9. **Offline/Notifications:** Cache today's stops, push alerts
+## 🛠️ Tech Stack
+- **Frontend:** React 18, TypeScript, Tailwind CSS, React Router v6, Framer Motion, Lucide Icons
+- **Backend:** Node.js 16+, Express, Passport (Google OAuth), JWT, dotenv
+- **DevOps:** (Planned: CircleCI, Jest)
+
+---
+
+## 🚀 Getting Started
+### 1. Clone the repo
+```bash
+git clone <repo-url>
+cd travel-concierge-ai
+```
+
+### 2. Install dependencies
+#### Frontend
+```bash
+npm install
+```
+#### Backend
+```bash
+cd backend
+npm install
+```
+
+### 3. Start the servers
+#### Backend (port 3001)
+```bash
+cd backend
+npm run dev
+```
+#### Frontend (port 3000)
+```bash
+cd ..
+npm start
+```
+
+### 4. Open:
+- Frontend: [http://localhost:3000](http://localhost:3000)
+- Backend: [http://localhost:3001](http://localhost:3001)
+
+---
+
+## 🧭 App Flow (Implemented/Stub)
+1. **Onboarding:** Carousel with AI, map, chat preview (**implemented**)
+2. **Auth:** Google OAuth (**implemented**), Apple/Phone (**UI only**)
+3. **Dashboard:** Create Trip (**UI**), Past Trips (**stub**)
+4. **Trip Form:** Enter city, dates, interests (**UI**), AI itinerary (**stub**)
+5. **Itinerary:** UI stub, edit/export buttons
+6. **Chat:** UI stub only
+7. **Map:** UI stub only
+8. **Export:** UI stub only
+9. **Offline/Notifications:** Not implemented
 
 ---
 
 ## 🧩 Development Guidelines
-- **Atomic components:** Use `/components/atoms` and `/components/molecules`
+- **Atomic components:** `/components/atoms` and `/components/molecules`
 - **Typed props:** All components/interfaces in TypeScript
 - **Accessibility:** ARIA, keyboard nav, focus outlines
 - **Styling:** Tailwind utility classes, custom theme
-- **Routing:** React Router v6, protected routes for auth
-- **API:** Use Axios instance with JWT
-- **Testing:** Use Jest for unit tests
-- **PWA:** Service worker for offline (future)
+- **Routing:** React Router v6, protected routes for auth (planned)
+- **API:** Use Axios instance with JWT (see `src/services/api.ts`)
+- **Testing:** (Planned: Jest)
+- **PWA:** (Planned: Service worker for offline)
+
+---
+
+## 🔒 Backend API & Auth
+- **Google OAuth:** `/api/auth/google` and `/api/auth/google/callback` (see `backend/routes/auth.js`)
+- **JWT:** Issued on successful login, sent to frontend via URL param
+- **Passport:** Configured for Google (see `backend/passport.js`)
+- **Environment:** Requires `.env` with Google credentials, JWT secret, and `FRONTEND_URL`
+- **Endpoints:**
+  - `GET /api/auth/google` — Start Google OAuth
+  - `GET /api/auth/google/callback` — OAuth callback, issues JWT
+  - `GET /` — Health check
 
 ---
 
