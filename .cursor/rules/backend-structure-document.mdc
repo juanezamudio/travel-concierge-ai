@@ -1,0 +1,57 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+1. Architecture Overview
+
+Monolithic Node.js service containerized via Docker, deployed on AWS Fargate.
+
+2. Modules & Layers
+
+Auth Module: OAuth flows, JWT issuance, SMS OTP.
+
+Trip Module: CRUD for trips, integrates AI and maps.
+
+Chat Module: Proxy to OpenAI, session management.
+
+Export Module: ICS & PDF generation, email dispatch via AWS SES.
+
+Notifications Module: Schedule push via AWS SNS.
+
+Database Layer: Sequelize ORM; migrations; models for Users, Trips, Stops, Notifications.
+
+3. API Endpoints (Partial)
+
+POST /api/auth/login       # OAuth callback or phone OTP verify
+POST /api/trips            # Create new trip
+GET  /api/trips/:id        # Fetch trip details
+PATCH /api/trips/:id       # Update via chat actions
+GET  /api/trips/:id/map    # Retrieve geoJSON for map view
+POST /api/export/calendar  # Generate & return ICS
+POST /api/export/pdf       # Return PDF blob
+POST /api/notify/schedule  # Schedule push notifications
+POST /api/chat/message     # Send message to AI and return response
+
+4. Data Models
+
+Model
+
+Key Fields
+
+User
+
+id, email, oauthProvider, phone, createdAt
+
+Trip
+
+id, userId, city, startDate, endDate, createdAt
+
+Stop
+
+id, tripId, title, startTime, endTime, location(lat,lng), notes
+
+Notification
+
+id, userId, tripId, type, scheduledTime, payload
+

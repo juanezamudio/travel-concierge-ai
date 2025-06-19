@@ -1,0 +1,22 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Frontend: React (17+), Tailwind CSS, React Router, PWA support for offline.
+
+Backend: Node.js (16+), Express.js, RESTful APIs.
+
+Database: PostgreSQL on AWS RDS.
+
+AI Integration: OpenAI GPT-4 via secure server-side proxies.
+
+Maps: Mapbox GL JS (or Google Maps JS SDK), Mapbox Directions API.
+
+Auth: OAuth2 with Google, Apple; SMS OTP via AWS SNS.
+
+Hosting/Infra: AWS ECS (Docker), AWS Fargate, AWS S3 (static assets), AWS CloudFront, AWS SNS (push notifications).
+
+CI/CD: CircleCI pipelines (build, test, deploy to staging/prod).
+
+Testing: Jest for unit tests, Supertest for API tests.

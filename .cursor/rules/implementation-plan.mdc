@@ -1,0 +1,82 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+1. Timeline (12 Weeks)
+
+Phase
+
+Weeks
+
+Goals
+
+Discovery & Setup
+
+1–2
+
+Finalize requirements, scaffold repos, configure CircleCI pipelines, AWS infra bootstrap
+
+Auth & User Flow
+
+3–4
+
+Implement OAuth, login UI, protected routes, user onboarding carousel
+
+Trip Core API
+
+5–6
+
+Build trip CRUD, AI integration for itinerary generation, unit tests
+
+Frontend MVP
+
+7–8
+
+Create Trip form, Itinerary view, chat widget, styling, responsiveness
+
+Maps & Navigation
+
+9–10
+
+Integrate Mapbox/Google Maps, navigation UI, offline caching, notifications
+
+Exports & QA
+
+11
+
+Calendar/PDF export, email share, bug fixes, accessibility audit
+
+Beta Release
+
+12
+
+Internal testing, deployment to prod, basic monitoring
+
+2. Key Milestones
+
+End of Week 2: Dev environment & CI/CD ready.
+
+End of Week 4: Auth & onboarding complete.
+
+End of Week 6: AI itinerary generation functional.
+
+End of Week 8: Frontend interface MVP.
+
+End of Week 10: Navigation & offline features live.
+
+Week 12: Beta launch.
+
+3. Responsibilities
+
+You (Sole Dev): Full‑stack implementation, AWS infra, testing.
+
+Consultation (ChatGPT): Architecture review, code samples, document updates.
+
+4. Next Steps
+
+Review & refine documents.
+
+Kick off sprint planning.
+
+Begin Week 1 tasks: repo scaffolding & CircleCI setup.

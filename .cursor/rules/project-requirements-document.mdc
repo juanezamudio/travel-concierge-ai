@@ -1,0 +1,107 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+1. Introduction
+
+App Name (tentative): Travel Concierge AI
+Purpose: Enable frequent travelers to plan, manage, and navigate personalized travel itineraries with AI-driven guidance.
+
+
+2. Scope
+
+User types: Registered travelers
+
+Core use cases:
+
+Sign up / log in via OAuth (Google, Apple, phone)
+
+Create single-city trip itineraries with AI
+
+Integrate real-time maps for turn‑by‑turn navigation
+
+Export plans to calendars, PDF, or email
+
+On‑the‑go modifications via AI chatbot
+
+Offline access to today’s stops; push notifications (leave‑now alerts, weather updates)
+
+
+3. Functional Requirements
+
+ID
+
+Feature
+
+Description
+
+FR1
+
+OAuth Authentication
+
+Users sign up/log in using Google, Apple, or phone number via SMS code.
+
+FR2
+
+Trip Creation
+
+Collect trip details (city, dates, preferences) and trigger AI generation of itinerary.
+
+FR3
+
+AI Itinerary Editing
+
+Allow conversational tweaks: add/remove/change activities via chat interface.
+
+FR4
+
+Map Integration
+
+Push itinerary waypoints into Google Maps or Mapbox; provide embedded turn‑by‑turn navigation.
+
+FR5
+
+Exports & Sharing
+
+Allow calendar export (ICS), PDF download, or email share of itinerary.
+
+FR6
+
+Offline Mode
+
+Cache current day stops and map tiles; display itinerary without connectivity.
+
+FR7
+
+Push Notifications
+
+“Leave now” alerts, weather warnings, schedule changes.
+
+FR8
+
+Admin Dashboard (future)
+
+Internal view of user trips and analytics (out of MVP scope).
+
+
+4. Non-Functional Requirements
+
+Performance: Support ≥50 concurrent users; initial load <3s.
+
+Availability: 99% uptime SLA.
+
+Security & Privacy: OAuth via Google/Apple/phone; HTTPS everywhere; GDPR/CCPA-ready.
+
+Accessibility: WCAG 2.1 AA compliant.
+
+Compatibility: Mobile-first; Chrome, Safari (iOS/Android), modern desktop browsers.
+
+
+5. Constraints & Assumptions
+
+Single‑city trips only (no multi‑city or collaboration for MVP).
+
+AI via OpenAI GPT API.
+
+Hosting and infra on AWS.

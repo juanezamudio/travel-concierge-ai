@@ -1,0 +1,58 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+1. Project Structure
+
+/src
+  /components   # Reusable UI (Buttons, Inputs, Cards)
+  /pages        # React Router pages (Login, Dashboard, Trip)
+  /services     # API clients, Auth
+  /hooks        # Custom hooks (useAuth, useTrip)
+  /styles       # Tailwind config, global styles
+  /assets       # Images, icons
+  /utils        # Helpers (date formatting, mapping)
+
+2. Styling & Theming
+
+Tailwind: Utility-first; create custom theme (greens, blues).
+
+Fonts: Sans-serif, legible at small sizes.
+
+Colors: Adventure palette—forest green (#2F855A), sky blue (#4299E1), white backgrounds.
+
+3. Component Guidelines
+
+Atomic: Buttons, Inputs, Modals in /components/atoms; Compound patterns (TripCard, ItineraryList) in /components/molecules.
+
+Naming: PascalCase.
+
+Props: Typed via TypeScript interfaces.
+
+Accessibility: ARIA roles, keyboard nav, focus outlines.
+
+4. State Management
+
+Local state: React useState/useReducer.
+
+Global state: Context for Auth & Trip data.
+
+5. Routing & Navigation
+
+React Router v6: Define routes in /src/pages.
+
+Protected routes: Redirect to login if not authenticated.
+
+Lazy loading: Code-split pages via React.lazy.
+
+6. API Integration
+
+Fetch client: Axios instance with interceptors for JWT.
+
+Error handling: Central error boundary component.
+
+7. PWA & Offline
+
+Use service worker (Workbox) to cache assets and map tiles for today’s stops.
+

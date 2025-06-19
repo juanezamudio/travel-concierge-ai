@@ -1,0 +1,66 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+1. Slide Carousel (Onboarding)
+
+Screens: 3–5 slides showcasing AI itinerary, map integration, concierge chat.
+
+Actions: Swipe or next; “Get Started” leads to login.
+
+
+2. Authentication
+
+Login/Signup: Options: Google, Apple, phone (OTP).
+
+Error states: invalid OTP; third‑party failure.
+
+
+3. Main Dashboard
+
+Create Trip button
+
+Past Trips list (future releases)
+
+
+4. Trip Details Form
+
+Fields: City, arrival date, departure date, interests.
+
+Submit: Calls AI service → generates itinerary.
+
+
+5. Itinerary View
+
+Structure: Chronological list with times, descriptions, images.
+
+Actions: Edit (chat), Export, Start Trip.
+
+
+6. Chat Interface
+
+Widget: Floating chat icon.
+
+Flow: Converse with AI to modify plan; suggestions update itinerary in real time.
+
+
+7. Export & Share
+
+Options: Calendar (ICS), PDF, Email.
+
+Confirmation: Toast on success.
+
+
+8. Navigation Mode
+
+Map Screen: Embedded map with markers and route.
+
+Controls: Next step, pause, exit navigation.
+
+
+9. Offline & Notifications
+
+Offline: Auto‑cache today’s map and itinerary.
+
+Push: Local notifications for next stop, weather.
